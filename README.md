@@ -20,10 +20,7 @@ A modern React application for tracking cargo shipments, featuring real-time upd
 ## 📁 Project Structure
 
 ```
-frontend-new/
-├── public/
-│   ├── index.html
-│   └── ...
+cargoShipment-frontend/
 ├── src/
 │   ├── components/
 │   │   ├── Dashboard.js
@@ -34,6 +31,7 @@ frontend-new/
 │   ├── redux/
 │   │   ├── store.js
 │   │   └── slices/
+│   │       └── shipmentSlice.js
 │   ├── services/
 │   │   └── api.js
 │   ├── styles/
@@ -44,6 +42,8 @@ frontend-new/
 │   ├── App.js
 │   ├── index.js
 │   └── setupTests.js
+├── public/
+│   └── index.html
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── package.json
@@ -54,22 +54,32 @@ frontend-new/
 
 ## 🛠️ Setup & Development
 
-### 1. Install Dependencies
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### 1. Navigate to the frontend directory
 
 ```bash
-cd frontend-new
+cd cargoShipment-frontend
+```
+
+### 2. Install Dependencies
+
+```bash
 npm install
 ```
 
-### 2. Environment Variables
+### 3. Environment Variables
 
-Create a `.env` file in `frontend-new/`:
+Create a `.env` file in `cargoShipment-frontend/`:
 
 ```
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
-### 3. Start the Development Server
+### 4. Start the React Development Server
 
 ```bash
 npm start
@@ -113,15 +123,36 @@ npm start
 
 ---
 
+## Usage
+
+1. **View Shipments**: The dashboard displays all shipments in a tabular format
+2. **Add Shipment**: Click "Add New Shipment" to create a new shipment entry
+3. **Filter & Sort**: Use the status filter and column sorting in the table
+4. **Map View**: Click "View on Map" to see the shipment route and current location
+5. **Update Location**: Use the API endpoint to update shipment locations
+
+---
+
+## 📝 Customization
+
+- **UI**: Modify or extend components in `src/components/`
+- **State**: Redux logic in `src/redux/`
+- **Styling**: Tailwind config in `tailwind.config.js` and custom styles in `src/styles/`
+
+---
+
 ## 🤝 Contributing
 
-1. Fork the repo
-2. Create a feature branch
-3. Commit and push your changes
-4. Open a Pull Request
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Create a Pull Request
 
 ---
 
 ## 📄 License
 
 This project is licensed under the ISC License.
+
+---
